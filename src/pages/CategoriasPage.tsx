@@ -9,7 +9,6 @@ const CategoriasPage = () => {
    const [isModalOpen, setIsModalOpen] = useState(false);
    const [editingId, setEditingId] = useState<number | null>(null);
 
-   // Estado del formulario
    const [formData, setFormData] = useState({
       nombre: '',
       descripcion: ''
@@ -20,13 +19,11 @@ const CategoriasPage = () => {
    }>({ isOpen: false, message: '' });
    const popupTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-   // Query para obtener datos
    const { data: categorias, isLoading, isError } = useQuery({
       queryKey: ['categorias'],
       queryFn: getCategorias,
    });
 
-   // Mutación para Crear
    const createMutation = useMutation({
       mutationFn: createCategoria,
       onSuccess: () => {
@@ -35,7 +32,6 @@ const CategoriasPage = () => {
       },
    });
 
-   // Mutación para Editar
    const updateMutation = useMutation({
       mutationFn: (data: Partial<Categoria>) => updateCategoria(editingId!, data),
       onSuccess: () => {
@@ -44,7 +40,6 @@ const CategoriasPage = () => {
       },
    });
 
-   // Mutación para Eliminar
    const deleteMutation = useMutation({
       mutationFn: deleteCategoria,
       onSuccess: () => {

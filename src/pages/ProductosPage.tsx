@@ -22,7 +22,6 @@ const ProductosPage = () => {
       ingredientes_ids: [] as number[]
    });
 
-   // Queries para datos sincronizados
    const { data: productos, isLoading, isError } = useQuery({ queryKey: ['productos'], queryFn: getProductos });
    const { data: categorias } = useQuery({ queryKey: ['categorias'], queryFn: getCategorias });
    const { data: ingredientes } = useQuery({ queryKey: ['ingredientes'], queryFn: getIngredientes });
