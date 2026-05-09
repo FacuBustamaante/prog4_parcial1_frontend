@@ -1,4 +1,4 @@
-import { FormModalProps } from '../types';
+import type { FormModalProps } from '../types';
 import { PrimaryButton, SecondaryButton } from '../buttons/Button';
 
 export const Modal = ({

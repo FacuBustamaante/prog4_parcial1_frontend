@@ -1,4 +1,4 @@
-import { ButtonProps } from '../types';
+import type { ButtonProps } from '../types';
 
 const variantStyles: Record<string, string> = {
   primary: 'bg-slate-900 text-white shadow-lg shadow-slate-900/15 hover:bg-slate-800',
