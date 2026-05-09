@@ -19,11 +19,11 @@ function App() {
             <Navbar />
             <main className="container mx-auto p-6">
                <Routes>
-                  <Route path="/" element={<h1 className="text-3xl font-bold">Bienvenido al Sistema de Gestión</h1>} />
+                  <Route path="/" element={<h1 className="text-3xl font-bold">Programación IV | Parcial 1</h1>} />
                   <Route path="/categorias" element={<CategoriasPage />} />
                   <Route path="/ingredientes" element={<IngredientesPage />} />
                   <Route path="/productos" element={<ProductosPage />} />
-                  <Route path="/productos/:id" element={<div>Detalle del Producto (Próximamente)</div>} />
+                  <Route path="/productos/:id" element={<div>Detalles de producto</div>} />
                </Routes>
             </main>
          </div>
